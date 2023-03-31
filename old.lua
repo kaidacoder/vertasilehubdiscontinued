@@ -1,102 +1,103 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 local Window = Rayfield:CreateWindow({
-    Name = "Script Hub",
-    LoadingTitle = "A hub for scripts",
+    Name = "Versatile Hub",
+    LoadingTitle = "A upcoming Hub",
     LoadingSubtitle = "By SpyKai",
     ConfigurationSaving = {
        Enabled = true,
-       FolderName = nil, -- Create a custom folder for your hub/game
+       FolderName = nil,
        FileName = "ScriptHub"
     },
     Discord = {
        Enabled = false,
-       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
-       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+       Invite = "noinvitelink", 
+       RememberJoins = true 
     },
-    KeySystem = true, -- Set this to true to use our key system
+    KeySystem = false,
     KeySettings = {
        Title = "Login",
        Subtitle = "To verify",
        Note = "The key is ScriptHub",
        FileName = "ScriptHubKey",
        SaveKey = true,
-       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       GrabKeyFromSite = false,
        Key = "ScriptHub"
     }
  })
- 
- Rayfield:Notify({
-    Title = "consider using my main Script SpyHub",
-    Content = "This is the link to the discord",
-    Duration = 0.1,
-    Image = 4483362458,
-    Actions = { -- Notification Buttons
-       Ignore = {
-          Name = "Sure!",
-          Callback = function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/piXJSWdb'))()
-       end
-    },
- },
- })
- 
-local Tab = Window:CreateTab("Update Log", 4483362458)
-local Label = Tab:CreateLabel("Realese!")
-local Paragraph = Tab:CreateParagraph({Title = "", Content = "I am proud to announce that script hub has finnaly realeased! Developer: SpyKai"})
- 
- 
- 
-local Tab = Window:CreateTab("bedwars", 4483362458)
+
+--this will create the Update Log tab
+local Tab = Window:CreateTab("Update Log")
+local Label = Tab:CreateLabel("Beta-v-1")
+local Paragraph = Tab:CreateParagraph({Title = "", Content = "Discalmer: This Universal Script is still in beta and will have bugs as of now please give feedback to help me fix/add new features thanks. SpyKai"}) --this will create the paragraph for the update log
+
+
+--This will make a tab called bedwars
+local Tab = Window:CreateTab("bedwars")
 local Button = Tab:CreateButton({
-    Name = "Vape v4 Script",
+    Name = "Bed wars script",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))() --this will run the script
     end,
  })
- 
- local Tab = Window:CreateTab("Phantom forces", 4483362458)
+
+
+--this wil create a tab called Phantom forces
+ local Tab = Window:CreateTab("Phantom forces")
  local Button = Tab:CreateButton({
     Name = "Phantom forces",
     Callback = function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/scripts/main/phantomforces1'),true))()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/scripts/main/phantomforces1'),true))() --this will run the Phantom forces script
     end,
  })
- local Tab = Window:CreateTab("Doors", 4483362458)
+
+
+--this will create a tab called Doors
+ local Tab = Window:CreateTab("Doors")
  local Button = Tab:CreateButton({
     Name = "Doors",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))() --this will run the Doors script
     end,
  })
- local Tab = Window:CreateTab("BrookHaven", 4483362458)
+
+
+--this will create a tab called BrookHaven
+ local Tab = Window:CreateTab("BrookHaven")
  local Button = Tab:CreateButton({
      Name = "BrookHaven Script",
      Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))() --this will run the BrookHaven script
      end,
   })
-local Tab = Window:CreateTab("Arcenal", 4483362458)
-local Button = Tab:CreateButton({
-    Name = "Arcenal script",
-    Callback = function()
-getgenv().UseProtection = true
-getgenv().UseWatermark = true
- 
-loadstring(game:HttpGet("https://gangofgang.gog-best.repl.co/aimhook/hook.lua"))()
-    end,
- })
- local Tab = Window:CreateTab("TDS", 4483362458)
+
+
+--this will create a tab called Arsenal
+  local Tab = Window:CreateTab("Arsenal")
+  local Button = Tab:CreateButton({
+     Name = "Arsenal Script",
+     Callback = function()
+     warn("This Has not been added yet!") --this will warn the user that it has not been implemented yet as i still need to find a working script
+     end,
+  })
+
+
+--this will make a tab called TDS
+ local Tab = Window:CreateTab("TDS")
  local Button = Tab:CreateButton({
     Name = "Tower Defence Simulator Script",
     Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/TowerDefenseSimulator.lua', true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/TowerDefenseSimulator.lua', true))() --this will run the tds script
     end,
  })
- local Tab = Window:CreateTab("Credits", 4483362458)
+
+
+--this will create a tab called Credits
+ local Tab = Window:CreateTab("Credits")
  local Label = Tab:CreateLabel("Credits")
- local Paragraph = Tab:CreateParagraph({Title = "", Content = "I am not the person who made these scripts I am just putting them here for easier use I give full credit to all the developers of these scripts. Developer: SpyKai."})
- 
- 
- 
- 
+ local Paragraph = Tab:CreateParagraph({Title = "", Content = "I am not the person who made these scripts I am just putting them here for easier use I give full credit to all the developers of these scripts. Developer: SpyKai."}) --this will create a paragraph wich you need to have a specific amount of words to make it work thats a bug.
 Rayfield:LoadConfiguration()
+
+
+
+
+--From the developer: Hi thanks for using my script hub (if you are not just looking at the source code) I have been working on this for a while and have made meny itterations of this prodject thanks.
